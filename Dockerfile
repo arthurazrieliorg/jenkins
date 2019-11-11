@@ -9,6 +9,8 @@ RUN apk update && apk upgrade && \
 # Allow the jenkins user to run docker
 RUN adduser jenkins docker
 
+RUN chmod 777 /var/run/docker.sock
+
 # Drop back to the regular jenkins user
 USER jenkins
 
