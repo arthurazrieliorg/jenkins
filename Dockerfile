@@ -9,8 +9,6 @@ RUN apk update && apk upgrade && \
 # Allow the jenkins user to run docker
 RUN adduser jenkins docker
 
-RUN service docker start
-
 # Drop back to the regular jenkins user
 USER jenkins
 
